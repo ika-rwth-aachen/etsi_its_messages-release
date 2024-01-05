@@ -1,0 +1,9 @@
+ros-iron-etsi-its-msgs-utils (2.0.0-1bullseye) bullseye; urgency=high
+
+  * Merge pull request #5 from ika-rwth-aachen/improvement/satisfy-package-conventions
+    Refactoring to satisfy ROS package conventions
+  * Contributors: Lennart Reiher
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Fri, 05 Jan 2024 00:00:00 -0000
+
+
