@@ -1,0 +1,12 @@
+Source: ros-humble-etsi-its-msgs
+Section: misc
+Priority: optional
+Maintainer: Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake, ros-humble-etsi-its-cam-msgs, ros-humble-etsi-its-denm-msgs, ros-humble-ros-environment, ros-humble-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-humble-etsi-its-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-etsi-its-cam-msgs, ros-humble-etsi-its-denm-msgs, ros-humble-ros-environment, ros-humble-ros-workspace
+Description: ROS messages for ETSI ITS messages
