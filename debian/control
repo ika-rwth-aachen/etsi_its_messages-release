@@ -1,0 +1,12 @@
+Source: ros-iron-etsi-its-denm-conversion
+Section: misc
+Priority: optional
+Maintainer: Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ament-cmake, ros-iron-etsi-its-denm-coding, ros-iron-etsi-its-denm-msgs, ros-iron-etsi-its-primitives-conversion, ros-iron-ros-environment, ros-iron-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-iron-etsi-its-denm-conversion
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-iron-etsi-its-denm-coding, ros-iron-etsi-its-denm-msgs, ros-iron-etsi-its-primitives-conversion, ros-iron-ros-environment, ros-iron-ros-workspace
+Description: Conversion functions for converting ROS messages to and from ASN.1-encoded ETSI ITS DENMs
