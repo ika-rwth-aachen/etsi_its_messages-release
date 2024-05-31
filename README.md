@@ -1,3 +1,39 @@
+## etsi_its_messages (noetic) - 2.0.2-1
+
+The packages in the `etsi_its_messages` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -y --no-web --ros-distro noetic --override-release-repository-push-url https://github.com/ika-rwth-aachen/etsi_its_messages-release.git --debug etsi_its_messages` on `Fri, 31 May 2024 20:46:50 -0000`
+
+These packages were released:
+- `etsi_its_cam_coding`
+- `etsi_its_cam_conversion`
+- `etsi_its_cam_msgs`
+- `etsi_its_coding`
+- `etsi_its_conversion`
+- `etsi_its_denm_coding`
+- `etsi_its_denm_conversion`
+- `etsi_its_denm_msgs`
+- `etsi_its_messages`
+- `etsi_its_msgs`
+- `etsi_its_msgs_utils`
+- `etsi_its_primitives_conversion`
+- `etsi_its_rviz_plugins`
+
+Version of package(s) in repository `etsi_its_messages`:
+
+- upstream repository: https://github.com/ika-rwth-aachen/etsi_its_messages.git
+- release repository: https://github.com/ika-rwth-aachen/etsi_its_messages-release.git
+- rosdistro version: `2.0.1-1`
+- old version: `2.0.1-1`
+- new version: `2.0.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.24.0`
+- rosdistro version: `0.9.1`
+- vcstools version: `0.1.42`
+
+
 ## etsi_its_messages (iron) - 2.0.1-1
 
 The packages in the `etsi_its_messages` repository were released into the `iron` distro by running `/usr/local/bin/bloom-release --rosdistro iron --track iron etsi_its_messages --edit` on `Tue, 27 Feb 2024 22:09:02 -0000`
