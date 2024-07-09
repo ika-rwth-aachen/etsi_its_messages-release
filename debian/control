@@ -1,0 +1,12 @@
+Source: ros-noetic-etsi-its-messages
+Section: misc
+Priority: optional
+Maintainer: Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-ros-environment
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-etsi-its-messages
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-etsi-its-coding, ros-noetic-etsi-its-conversion, ros-noetic-etsi-its-msgs, ros-noetic-etsi-its-msgs-utils, ros-noetic-ros-environment
+Description: ROS support for ETSI ITS messages
