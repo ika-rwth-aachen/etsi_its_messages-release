@@ -1,0 +1,9 @@
+ros-noetic-etsi-its-cam-ts-conversion (2.2.0-1focal) focal; urgency=high
+
+  * Merge pull request #29 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/29> from ika-rwth-aachen/cam-release2
+    Add ETSI ITS CAM TS (release2)
+  * Contributors: Jean-Pierre Busch
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Thu, 01 Aug 2024 00:00:00 -0000
+
+
