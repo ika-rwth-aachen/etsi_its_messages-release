@@ -25,21 +25,19 @@ SOFTWARE.
 */
 
 /**
- * @file impl/cam/cam_access.h
- * @brief Main CAM access implementation header
+ * @file cam_ts_access.h
+ * @brief Main CAM access header to include in ROS 1 projects
  */
 
 #pragma once
 
-#include <cstring>
-#include <iostream>
-#include <map>
+// Messages
+#include <etsi_its_cam_ts_msgs/CAM.h>
+#include <geometry_msgs/PointStamped.h>
 
-#include <GeographicLib/UTMUPS.hpp>
+namespace etsi_its_cam_ts_msgs {
+    namespace gm = geometry_msgs;
+}
 
-#include <etsi_its_msgs_utils/impl/cam/cam_getters.h>
-#include <etsi_its_msgs_utils/impl/cam/cam_setters.h>
-
-namespace etsi_its_cam_msgs::access {
-#include <etsi_its_msgs_utils/impl/cam/cam_utils.h>
-} // namespace etsi_its_cam_msgs::access
+// Implementation
+#include <etsi_its_msgs_utils/impl/cam/cam_ts_access.h>

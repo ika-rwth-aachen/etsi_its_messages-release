@@ -25,8 +25,8 @@ SOFTWARE.
 */
 
 /**
- * @file impl/cam/cam_access.h
- * @brief Main CAM access implementation header
+ * @file impl/cam/cam_ts_access.h
+ * @brief Main CAM TS access implementation header
  */
 
 #pragma once
@@ -37,9 +37,9 @@ SOFTWARE.
 
 #include <GeographicLib/UTMUPS.hpp>
 
-#include <etsi_its_msgs_utils/impl/cam/cam_getters.h>
-#include <etsi_its_msgs_utils/impl/cam/cam_setters.h>
+#include <etsi_its_msgs_utils/impl/cam/cam_ts_getters.h>
+#include <etsi_its_msgs_utils/impl/cam/cam_ts_setters.h>
 
-namespace etsi_its_cam_msgs::access {
+namespace etsi_its_cam_ts_msgs::access {
 #include <etsi_its_msgs_utils/impl/cam/cam_utils.h>
-} // namespace etsi_its_cam_msgs::access
+} // namespace etsi_its_cam_ts_msgs::access
