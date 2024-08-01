@@ -19,15 +19,15 @@ int randomInt(int min, int max) {
   return uniform_distribution_int(random_engine);
 }
 
-TEST(etsi_its_cam_msgs, test_set_get_cam) {
+TEST(etsi_its_cam_ts_msgs, test_set_get_cam) {
 
   CAM cam;
 
-  int station_id = randomInt(StationID::MIN,StationID::MAX);
-  int protocol_version = randomInt(ItsPduHeader::PROTOCOL_VERSION_MIN,ItsPduHeader::PROTOCOL_VERSION_MAX);
+  int station_id = randomInt(StationId::MIN,StationId::MAX);
+  int protocol_version = randomInt(OrdinalNumber1B::MIN,OrdinalNumber1B::MAX);
   setItsPduHeader(cam, station_id, protocol_version);
-  EXPECT_EQ(ItsPduHeader::MESSAGE_ID_CAM, cam.header.message_id);
-  EXPECT_EQ(protocol_version, cam.header.protocol_version);
+  EXPECT_EQ(MessageId::CAM, cam.header.message_id.value);
+  EXPECT_EQ(protocol_version, cam.header.protocol_version.value);
   EXPECT_EQ(station_id, getStationID(cam));
 
   // https://www.etsi.org/deliver/etsi_ts/102800_102899/10289402/01.02.01_60/ts_10289402v010201p.pdf
@@ -38,18 +38,18 @@ TEST(etsi_its_cam_msgs, test_set_get_cam) {
   uint64_t t_2007 = ((uint64_t)1167609600)*1e9;
   TimestampIts t_its;
   EXPECT_EQ(1, etsi_its_msgs::getLeapSecondInsertionsSince2004(t_2007*1e-9));
-  etsi_its_cam_msgs::access::setTimestampITS(t_its, t_2007, etsi_its_msgs::getLeapSecondInsertionsSince2004(t_2007*1e-9));
+  etsi_its_cam_ts_msgs::access::setTimestampITS(t_its, t_2007, etsi_its_msgs::getLeapSecondInsertionsSince2004(t_2007*1e-9));
   EXPECT_EQ(94694401000, t_its.value);
   setGenerationDeltaTime(cam, t_2007, etsi_its_msgs::getLeapSecondInsertionsSince2004(t_2007*1e-9));
   EXPECT_EQ(94694401000%65536, getGenerationDeltaTimeValue(cam));
   TimestampIts t_its2;
   uint64_t t_2007_off = t_2007 + 5*1e9;
-  etsi_its_cam_msgs::access::setTimestampITS(t_its2, t_2007_off, etsi_its_msgs::getLeapSecondInsertionsSince2004(t_2007*1e-9));
+  etsi_its_cam_ts_msgs::access::setTimestampITS(t_its2, t_2007_off, etsi_its_msgs::getLeapSecondInsertionsSince2004(t_2007*1e-9));
   EXPECT_EQ(94694401000, getTimestampITSFromGenerationDeltaTime(getGenerationDeltaTime(cam), t_its2).value);
   EXPECT_EQ(t_2007, getUnixNanosecondsFromGenerationDeltaTime(getGenerationDeltaTime(cam), t_its2, etsi_its_msgs::getLeapSecondInsertionsSince2004(t_2007*1e-9)));
   EXPECT_EQ(t_2007, getUnixNanosecondsFromGenerationDeltaTime(getGenerationDeltaTime(cam), t_2007_off, etsi_its_msgs::getLeapSecondInsertionsSince2004(t_2007*1e-9)));
 
-  int stationType_val = randomInt(StationType::MIN, StationType::MAX);
+  int stationType_val = randomInt(TrafficParticipantType::MIN, TrafficParticipantType::MAX);
   setStationType(cam, stationType_val);
   EXPECT_EQ(stationType_val, getStationType(cam));
 

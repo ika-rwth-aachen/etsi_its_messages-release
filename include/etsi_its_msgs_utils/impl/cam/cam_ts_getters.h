@@ -25,14 +25,13 @@ SOFTWARE.
 */
 
 /**
- * @file impl/cdd/cdd_access.h
- * @brief Main CDD access implementation header
+ * @file impl/cam/cam_ts_getters.h
+ * @brief Getter functions for the ETSI ITS CAM (TS)
  */
 
 #pragma once
 
-#include <cmath>
-
-#include <etsi_its_msgs_utils/impl/cdd/cdd_checks.h>
-#include <etsi_its_msgs_utils/impl/cdd/cdd_getters.h>
-#include <etsi_its_msgs_utils/impl/cdd/cdd_setters.h>
+namespace etsi_its_cam_ts_msgs::access {
+#include <etsi_its_msgs_utils/impl/cdd/cdd_v2-1-1_getters.h>
+#include <etsi_its_msgs_utils/impl/cam/cam_getters_common.h>
+} // namespace etsi_its_cam_ts_msgs::access
