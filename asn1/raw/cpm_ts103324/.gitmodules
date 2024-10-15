@@ -1,0 +1,3 @@
+[submodule "asn/cdd"]
+	path = asn/cdd
+	url = https://forge.etsi.org/rep/ITS/asn1/cdd_ts102894_2.git
