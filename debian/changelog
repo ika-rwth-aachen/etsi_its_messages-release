@@ -1,9 +1,0 @@
-ros-noetic-etsi-its-vam-ts-coding (2.3.0-1focal) focal; urgency=high
-
-  * Merge pull request #36 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/36> from ika-rwth-aachen/vam-ts
-    Integrate VAM TS
-  * Contributors: Guido Küppers
-
- -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 15 Oct 2024 00:00:00 -0000
-
-
