@@ -1,0 +1,60 @@
+ros-noetic-etsi-its-msgs-utils (2.4.0-1focal) focal; urgency=high
+
+  * Merge pull request #42 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/42> from ika-rwth-aachen/feature/auto-cmake-generation
+    Add automatic generation of CMakeLists.txt for msg packages
+  * Merge branch 'main' into feature/auto-cmake-generation
+  * Merge pull request #44 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/44> from ika-rwth-aachen/improvement/sample-scripts
+    Relocate sample scripts
+  * Merge branch 'main' into feature/denm-launchfile-transformation
+  * Contributors: Jean-Pierre Busch, Lennart Reiher
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 19 Nov 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-msgs-utils (2.3.0-1focal) focal; urgency=high
+
+  * Merge pull request #38 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/38> from ika-rwth-aachen/feature/cpm_utils
+    Adding CPM Access-Functions and RViz Plugin; and improve utils package for all message types
+  * Contributors: Jean-Pierre Busch
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 15 Oct 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-msgs-utils (2.2.0-1focal) focal; urgency=high
+
+  * Merge pull request #29 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/29> from ika-rwth-aachen/cam-release2
+    Add ETSI ITS CAM TS (release2)
+  * Merge pull request #2 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/2> from lreiher/fix-converter-memleak
+    Resolve conflicts with ika-rwth-aachen/etsi_its_messages and free ret.buffer
+  * Merge remote-tracking branch 'ika/main' into fix-converter-memleak
+  * Contributors: Jean-Pierre Busch, Lennart Reiher, v0-e
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Thu, 01 Aug 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-msgs-utils (2.1.0-1focal) focal; urgency=high
+
+  * Merge pull request #20 from ika-rwth-aachen/further-msgs
+    Switch to rust-based generation and add additional message types
+  * Contributors: Jean-Pierre Busch
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 09 Jul 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-msgs-utils (2.0.2-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Fri, 31 May 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-msgs-utils (2.0.1-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 27 Feb 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-msgs-utils (2.0.0-1focal) focal; urgency=high
+
+  * Merge pull request #5 from ika-rwth-aachen/improvement/satisfy-package-conventions
+    Refactoring to satisfy ROS package conventions
+  * Contributors: Lennart Reiher
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Fri, 05 Jan 2024 00:00:00 -0000
+
+
