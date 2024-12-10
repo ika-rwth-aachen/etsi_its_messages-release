@@ -1,0 +1,12 @@
+Source: ros-noetic-etsi-its-msgs
+Section: misc
+Priority: optional
+Maintainer: Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-etsi-its-cam-msgs, ros-noetic-etsi-its-cam-ts-msgs, ros-noetic-etsi-its-cpm-ts-msgs, ros-noetic-etsi-its-denm-msgs, ros-noetic-etsi-its-mapem-ts-msgs, ros-noetic-etsi-its-spatem-ts-msgs, ros-noetic-etsi-its-vam-ts-msgs, ros-noetic-ros-environment
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-etsi-its-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-etsi-its-cam-msgs, ros-noetic-etsi-its-cam-ts-msgs, ros-noetic-etsi-its-cpm-ts-msgs, ros-noetic-etsi-its-denm-msgs, ros-noetic-etsi-its-mapem-ts-msgs, ros-noetic-etsi-its-spatem-ts-msgs, ros-noetic-etsi-its-vam-ts-msgs, ros-noetic-ros-environment
+Description: ROS messages for ETSI ITS messages
