@@ -1,0 +1,36 @@
+ros-noetic-etsi-its-cam-ts-msgs (3.0.0-1focal) focal; urgency=high
+
+  * Merge pull request #46 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/46> from ika-rwth-aachen/improvement/formatting
+    Usability and formatting improvements for codegen-py
+  * Merge pull request #48 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/48> from ika-rwth-aachen/improvement/cpm-codegen-py
+    Enable CLASS and SET support in codegen-py
+  * Merge pull request #28 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/28> from ika-rwth-aachen/feature/spatem-mapem
+    SPATEM/MAPEM Support
+  * Contributors: Jean-Pierre Busch, Lennart Reiher
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 10 Dec 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-cam-ts-msgs (2.4.0-1focal) focal; urgency=high
+
+  * Merge pull request #42 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/42> from ika-rwth-aachen/feature/auto-cmake-generation
+    Add automatic generation of CMakeLists.txt for msg packages
+  * Merge branch 'main' into feature/denm-launchfile-transformation
+  * Contributors: Jean-Pierre Busch, Lennart Reiher
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 19 Nov 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-cam-ts-msgs (2.3.0-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 15 Oct 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-cam-ts-msgs (2.2.0-1focal) focal; urgency=high
+
+  * Merge pull request #29 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/29> from ika-rwth-aachen/cam-release2
+    Add ETSI ITS CAM TS (release2)
+  * Contributors: Jean-Pierre Busch
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Thu, 01 Aug 2024 00:00:00 -0000
+
+
