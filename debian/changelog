@@ -1,0 +1,12 @@
+ros-noetic-etsi-its-mapem-ts-msgs (3.0.0-1focal) focal; urgency=high
+
+  * Merge pull request #46 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/46> from ika-rwth-aachen/improvement/formatting
+    Usability and formatting improvements for codegen-py
+  * Merge pull request #47 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/47> from ika-rwth-aachen/improvement/naming-rules
+  * Merge pull request #28 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/28> from ika-rwth-aachen/feature/spatem-mapem
+    SPATEM/MAPEM Support
+  * Contributors: Jean-Pierre Busch, Lennart Reiher
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 10 Dec 2024 00:00:00 -0000
+
+
