@@ -1,0 +1,4 @@
+[submodule "cdd"]
+	path = cdd
+	url = https://forge.etsi.org/rep/ITS/asn1/cdd_ts102894_2.git
+	branch = release2
