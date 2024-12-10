@@ -1,4 +1,4 @@
-etsi_its_conversion:
+/**/*:
   ros__parameters:
     has_btp_destination_port: true
     btp_destination_port_offset: 8  # default for Cohda Wireless MK-5 exampleETSI application
@@ -8,11 +8,15 @@ etsi_its_conversion:
       - cam_ts
       - cpm_ts
       - denm
+      - mapem_ts
+      - spatem_ts
       - vam_ts
     udp2ros_etsi_types:
       - cam
       - cpm_ts
       - denm
+      - mapem_ts
+      - spatem_ts
       - vam_ts
     subscriber_queue_size: 10
     publisher_queue_size: 10
