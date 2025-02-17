@@ -3,7 +3,7 @@
 # ==============================================================================
 # MIT License
 #
-# Copyright (c) 2023-2024 Institute for Automotive Engineering (ika), RWTH Aachen University
+# Copyright (c) 2023-2025 Institute for Automotive Engineering (ika), RWTH Aachen University
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -166,10 +166,21 @@ def findDependenciesOfConversionHeaders(parent_file_path: str, type: str, file_l
                     new_file_list.append(msg_type)
                     new_file_list = findDependenciesOfConversionHeaders(f"{os.path.dirname(parent_file_path)}/{msg_type}.h", type, new_file_list)
 
-    # make sure there are no duplicates and sort alphabetically
-    new_file_list = sorted(list(set(new_file_list)))
-
     return new_file_list
+
+def additionalMessageTypes(path: str, msg_type: str) -> List[str]:
+    additional = []
+
+    for f in glob.glob(os.path.join(path, "*.h")):
+        msg_filename = os.path.splitext(os.path.basename(f))[0]
+        if msg_type == "DENM" and msg_filename.endswith("SubCauseCode"):
+            additional.append(msg_filename)
+
+    return additional
+
+def sortHeaderFiles(files: List[str]) -> List[str]:
+    # make sure there are no duplicates and sort alphabetically
+    return sorted(list(set(files)))
 
 def main():
 
@@ -199,6 +210,8 @@ def main():
         msg_type = "CollectivePerceptionMessage"
     elif args.type == "cam_ts":
         msg_type = "CAM"
+    elif args.type == "denm_ts":
+        msg_type = "DENM"
     elif args.type == "mapem_ts":
         msg_type = "MAPEM"
     elif args.type == "spatem_ts":
@@ -206,8 +219,12 @@ def main():
     elif args.type == "vam_ts":
         msg_type = "VAM"
     header_files = findDependenciesOfConversionHeaders(os.path.join(args.output_dir, f"convert{msg_type}.h"), args.type, [f"convert{msg_type}"])
+    header_files += additionalMessageTypes(args.output_dir, msg_type)
+    header_files = sortHeaderFiles(header_files)
+
     for f in glob.glob(os.path.join(args.output_dir, "*.h")):
-        if os.path.splitext(os.path.basename(f))[0] not in header_files:
+        header_filename = os.path.splitext(os.path.basename(f))[0]
+        if header_filename not in header_files:
             os.remove(f)
 
     print(f"Generated {len(header_files)} conversion headers for {msg_type}")
