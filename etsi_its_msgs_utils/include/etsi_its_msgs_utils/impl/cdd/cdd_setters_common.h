@@ -2,7 +2,7 @@
 =============================================================================
 MIT License
 
-Copyright (c) 2023-2024 Institute for Automotive Engineering (ika), RWTH Aachen University
+Copyright (c) 2023-2025 Institute for Automotive Engineering (ika), RWTH Aachen University
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@ SOFTWARE.
 #ifndef ETSI_ITS_MSGS_UTILS_IMPL_CDD_CDD_SETTERS_COMMON_H
 #define ETSI_ITS_MSGS_UTILS_IMPL_CDD_CDD_SETTERS_COMMON_H
 
-#include <etsi_its_msgs_utils/impl/cdd/cdd_checks.h>
+#include <etsi_its_msgs_utils/impl/checks.h>
 #include <etsi_its_msgs_utils/impl/constants.h>
 #include <GeographicLib/UTMUPS.hpp>
 #include <cstring>
@@ -42,12 +42,12 @@ SOFTWARE.
  *
  * @param[in] timestamp_its TimestampITS object to set the timestamp
  * @param[in] unix_nanosecs Unix-Nanoseconds to set the timestamp for
- * @param[in] n_leap_seconds Number of leap-seconds since 2004. (Default: etsi_its_msgs::LEAP_SECOND_INSERTIONS_SINCE_2004.end()->second)
+ * @param[in] n_leap_seconds Number of leap-seconds since 2004. (Defaults to the todays number of leap seconds since 2004.)
  * @param[in] epoch_offset Unix-Timestamp in seconds for the 01.01.2004 at 00:00:00
  */
 inline void setTimestampITS(
     TimestampIts& timestamp_its, const uint64_t unix_nanosecs,
-    const uint16_t n_leap_seconds = etsi_its_msgs::LEAP_SECOND_INSERTIONS_SINCE_2004.end()->second) {
+    const uint16_t n_leap_seconds = etsi_its_msgs::LEAP_SECOND_INSERTIONS_SINCE_2004.rbegin()->second) {
   uint64_t t_its = unix_nanosecs * 1e-6 + (uint64_t)(n_leap_seconds * 1e3) - etsi_its_msgs::UNIX_SECONDS_2004 * 1e3;
   throwIfOutOfRange(t_its, TimestampIts::MIN, TimestampIts::MAX, "TimestampIts");
   timestamp_its.value = t_its;
@@ -114,7 +114,7 @@ inline void setAltitude(Altitude& altitude, const double value) {
  * @param value SpeedValue in m/s as decimal number
  */
 inline void setSpeedValue(SpeedValue& speed, const double value) {
-  int64_t speed_val = (int64_t)std::round(value * 1e2);
+  uint16_t speed_val = (uint16_t)std::round(value * 1e2);
   throwIfOutOfRange(speed_val, SpeedValue::MIN, SpeedValue::MAX, "SpeedValue");
   speed.value = speed_val;
 }
@@ -184,38 +184,6 @@ inline void setFromUTMPosition(T& reference_position, const gm::PointStamped& ut
     throw std::invalid_argument(e.what());
   }
   setReferencePosition(reference_position, latitude, longitude, utm_position.point.z);
-}
-
-/**
- * @brief Set a Bit String by a vector of bools
- *
- * @tparam T
- * @param bitstring BitString to set
- * @param bits vector of bools
- */
-template <typename T>
-inline void setBitString(T& bitstring, const std::vector<bool>& bits) {
-  // bit string size
-  const int bits_per_byte = 8;
-  const int n_bytes = (bits.size() - 1) / bits_per_byte + 1;
-  const int n_bits = n_bytes * bits_per_byte;
-
-  // init output
-  bitstring.bits_unused = n_bits - bits.size();
-  bitstring.value = std::vector<uint8_t>(n_bytes);
-
-  // loop over all bytes in reverse order
-  for (int byte_idx = n_bytes - 1; byte_idx >= 0; byte_idx--) {
-    // loop over bits in a byte
-    for (int bit_idx_in_byte = 0; bit_idx_in_byte < bits_per_byte; bit_idx_in_byte++) {
-      // map bit index in byte to bit index in total bitstring
-      int bit_idx = (n_bytes - byte_idx - 1) * bits_per_byte + bit_idx_in_byte;
-      if (byte_idx == 0 && bit_idx >= n_bits - bitstring.bits_unused) break;
-
-      // set bit in output bitstring appropriately
-      bitstring.value[byte_idx] |= bits[bit_idx] << bit_idx_in_byte;
-    }
-  }
 }
 
 #endif  // ETSI_ITS_MSGS_UTILS_IMPL_CDD_CDD_SETTERS_COMMON_H

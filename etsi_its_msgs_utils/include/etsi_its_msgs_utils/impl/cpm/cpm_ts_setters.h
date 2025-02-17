@@ -2,7 +2,7 @@
 =============================================================================
 MIT License
 
-Copyright (c) 2023-2024 Institute for Automotive Engineering (ika), RWTH Aachen University
+Copyright (c) 2023-2025 Institute for Automotive Engineering (ika), RWTH Aachen University
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -31,6 +31,7 @@ SOFTWARE.
 
 #pragma once
 
+#include <etsi_its_msgs_utils/impl/checks.h>
 #include <etsi_its_msgs_utils/impl/constants.h>
 
 namespace etsi_its_cpm_ts_msgs::access {
@@ -64,7 +65,7 @@ inline void setItsPduHeader(CollectivePerceptionMessage& cpm, const uint32_t sta
  */
 inline void setReferenceTime(
     CollectivePerceptionMessage& cpm, const uint64_t unix_nanosecs,
-    const uint16_t n_leap_seconds = etsi_its_msgs::LEAP_SECOND_INSERTIONS_SINCE_2004.end()->second) {
+    const uint16_t n_leap_seconds = etsi_its_msgs::LEAP_SECOND_INSERTIONS_SINCE_2004.rbegin()->second) {
   TimestampIts t_its;
   setTimestampITS(t_its, unix_nanosecs, n_leap_seconds);
   throwIfOutOfRange(t_its.value, TimestampIts::MIN, TimestampIts::MAX, "TimestampIts");
