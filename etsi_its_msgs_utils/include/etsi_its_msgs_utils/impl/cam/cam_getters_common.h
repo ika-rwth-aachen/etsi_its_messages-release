@@ -2,7 +2,7 @@
 =============================================================================
 MIT License
 
-Copyright (c) 2023-2024 Institute for Automotive Engineering (ika), RWTH Aachen University
+Copyright (c) 2023-2025 Institute for Automotive Engineering (ika), RWTH Aachen University
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -31,6 +31,8 @@ SOFTWARE.
 
 #ifndef ETSI_ITS_MSGS_UTILS_IMPL_CAM_CAM_GETTERS_COMMON_H
 #define ETSI_ITS_MSGS_UTILS_IMPL_CAM_CAM_GETTERS_COMMON_H
+
+#include <etsi_its_msgs_utils/impl/asn1_primitives/asn1_primitives_getters.h>
 
 /**
  * @brief Get the Station ID object
