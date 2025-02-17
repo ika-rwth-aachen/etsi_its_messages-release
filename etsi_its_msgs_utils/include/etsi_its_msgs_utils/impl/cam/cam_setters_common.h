@@ -2,7 +2,7 @@
 =============================================================================
 MIT License
 
-Copyright (c) 2023-2024 Institute for Automotive Engineering (ika), RWTH Aachen University
+Copyright (c) 2023-2025 Institute for Automotive Engineering (ika), RWTH Aachen University
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -32,18 +32,20 @@ SOFTWARE.
 #ifndef ETSI_ITS_MSGS_UTILS_IMPL_CAM_CAM_SETTERS_COMMON_H
 #define ETSI_ITS_MSGS_UTILS_IMPL_CAM_CAM_SETTERS_COMMON_H
 
+#include <etsi_its_msgs_utils/impl/checks.h>
 #include <etsi_its_msgs_utils/impl/constants.h>
+#include <etsi_its_msgs_utils/impl/asn1_primitives/asn1_primitives_setters.h>
 
 /**
  * @brief Set the GenerationDeltaTime-Value
  *
  * @param generation_delta_time GenerationDeltaTime to set the GenerationDeltaTime-Value for
  * @param unix_nanosecs Timestamp in unix-nanoseconds to set the GenerationDeltaTime-Value from
- * @param n_leap_seconds Number of leap seconds since 2004 for the given timestamp (Default: etsi_its_msgs::LEAP_SECOND_INSERTIONS_SINCE_2004.end()->second)
+ * @param n_leap_seconds Number of leap seconds since 2004 for the given timestamp (Defaults to the todays number of leap seconds since 2004.)
  */
 inline void setGenerationDeltaTime(
     GenerationDeltaTime& generation_delta_time, const uint64_t unix_nanosecs,
-    const uint16_t n_leap_seconds = etsi_its_msgs::LEAP_SECOND_INSERTIONS_SINCE_2004.end()->second) {
+    const uint16_t n_leap_seconds = etsi_its_msgs::LEAP_SECOND_INSERTIONS_SINCE_2004.rbegin()->second) {
   TimestampIts t_its;
   setTimestampITS(t_its, unix_nanosecs, n_leap_seconds);
   uint16_t gdt_value = t_its.value % 65536;
@@ -56,11 +58,11 @@ inline void setGenerationDeltaTime(
  *
  * @param cam CAM to set the GenerationDeltaTime-Value for
  * @param unix_nanosecs Timestamp in unix-nanoseconds to set the GenerationDeltaTime-Value from
- * @param n_leap_seconds Number of leap seconds since 2004 for the given timestamp  (Default: etsi_its_msgs::LEAP_SECOND_INSERTIONS_SINCE_2004.end()->second)
+ * @param n_leap_seconds Number of leap seconds since 2004 for the given timestamp (Defaults to the todays number of leap seconds since 2004.)
  */
 inline void setGenerationDeltaTime(
     CAM& cam, const uint64_t unix_nanosecs,
-    const uint16_t n_leap_seconds = etsi_its_msgs::LEAP_SECOND_INSERTIONS_SINCE_2004.end()->second) {
+    const uint16_t n_leap_seconds = etsi_its_msgs::LEAP_SECOND_INSERTIONS_SINCE_2004.rbegin()->second) {
   setGenerationDeltaTime(cam.cam.generation_delta_time, unix_nanosecs, n_leap_seconds);
 }
 
