@@ -26,15 +26,15 @@
 
 import rclpy
 from rclpy.node import Node
-from etsi_its_denm_msgs.msg import *
+from etsi_its_denm_ts_msgs.msg import *
 import utils
 
 class Publisher(Node):
 
     def __init__(self):
 
-        super().__init__("denm_publisher")
-        topic = "/etsi_its_conversion/denm/in"
+        super().__init__("denm_ts_publisher")
+        topic = "/etsi_its_conversion/denm_ts/in"
         self.publisher = self.create_publisher(DENM, topic, 1)
         self.timer = self.create_timer(1.0, self.publish)
 
@@ -42,12 +42,13 @@ class Publisher(Node):
 
         msg = DENM()
 
-        msg.header.protocol_version = 2
-        msg.header.message_id = msg.header.MESSAGE_ID_DENM
+        msg.header.protocol_version.value = 2
+        msg.header.message_id.value = msg.header.message_id.DENM
+        msg.header.station_id.value = 44
 
         msg.denm.management = ManagementContainer()
-        msg.denm.management.event_position.latitude.value = int(msg.denm.management.event_position.latitude.ONE_MICRODEGREE_NORTH * 1e6 * 50.786852666670434)
-        msg.denm.management.event_position.longitude.value = int(msg.denm.management.event_position.longitude.ONE_MICRODEGREE_EAST * 1e6 * 6.046507490742381)
+        msg.denm.management.event_position.latitude.value = int(1e7 * 50.786852666670434)
+        msg.denm.management.event_position.longitude.value = int(1e7 * 6.046507490742381)
         msg.denm.management.reference_time.value = utils.get_t_its(self.get_clock().now().nanoseconds)
 
         msg.denm.alacarte_is_present = True
@@ -55,8 +56,8 @@ class Publisher(Node):
         msg.denm.alacarte.stationary_vehicle.carrying_dangerous_goods_is_present = True
 
         msg.denm.situation_is_present = True
-        msg.denm.situation.event_type.cause_code.value = 93
-        msg.denm.situation.event_type.sub_cause_code.value = 2
+        msg.denm.situation.event_type.cc_and_scc.choice = CauseCodeChoice.CHOICE_HUMAN_PROBLEM93
+        msg.denm.situation.event_type.cc_and_scc.human_problem93.value = HumanProblemSubCauseCode.HEART_PROBLEM
 
         dangerous_goods_extended = DangerousGoodsExtended()
         dangerous_goods_extended.emergency_action_code_is_present = True
@@ -67,7 +68,7 @@ class Publisher(Node):
         dangerous_goods_extended.company_name = "ika, RWTH Aachen" # UTF8String
         msg.denm.alacarte.stationary_vehicle.carrying_dangerous_goods = dangerous_goods_extended
 
-        self.get_logger().info(f"Publishing DENM")
+        self.get_logger().info(f"Publishing DENM (TS)")
         self.publisher.publish(msg)
 
 

@@ -25,20 +25,19 @@ SOFTWARE.
 */
 
 /**
- * @file cam_access.hpp
- * @brief Main CAM access header to include in ROS 2 projects
+ * @file spatem_ts_access.h
+ * @brief Main SPATEM access header to include in ROS 1 projects
  */
 
 #pragma once
 
 // Messages
-#include <etsi_its_cam_msgs/msg/cam.hpp>
-#include <geometry_msgs/msg/point_stamped.hpp>
+#include <etsi_its_spatem_ts_msgs/SPATEM.h>
+#include <geometry_msgs/PointStamped.h>
 
-namespace etsi_its_cam_msgs {
-    using namespace msg;
-    namespace gm = geometry_msgs::msg;
+namespace etsi_its_spatem_ts_msgs {
+    namespace gm = geometry_msgs;
 }
 
 // Implementation
-#include <etsi_its_msgs_utils/impl/cam/cam_access.h>
+#include <etsi_its_msgs_utils/impl/spatem/spatem_ts_access.h>

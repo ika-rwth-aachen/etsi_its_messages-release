@@ -2,7 +2,7 @@
 =============================================================================
 MIT License
 
-Copyright (c) 2023-2024 Institute for Automotive Engineering (ika), RWTH Aachen University
+Copyright (c) 2023-2025 Institute for Automotive Engineering (ika), RWTH Aachen University
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -25,18 +25,19 @@ SOFTWARE.
 */
 
 /**
- * @file impl/cdd/cdd_checks.h
- * @brief Sanity-check functions etc. for the ETSI ITS Common Data Dictionary (CDD)
+ * @file mapem_ts_access.h
+ * @brief Main MAPEM access header to include in ROS 1 projects
  */
 
-#ifndef ETSI_ITS_MSGS_UTILS_IMPL_CDD_CDD_CHECKS_H
-#define ETSI_ITS_MSGS_UTILS_IMPL_CDD_CDD_CHECKS_H
+#pragma once
 
-template <typename T1, typename T2>
-void throwIfOutOfRange(const T1& val, const T2& min, const T2& max, const std::string val_desc) {
-  if (val < min || val > max)
-    throw std::invalid_argument(val_desc + " value is out of range (" + std::to_string(min) + "..." +
-                                std::to_string(max) + ")!");
+// Messages
+#include <etsi_its_mapem_ts_msgs/MAPEM.h>
+#include <geometry_msgs/PointStamped.h>
+
+namespace etsi_its_mapem_ts_msgs {
+    namespace gm = geometry_msgs;
 }
 
-#endif  // ETSI_ITS_MSGS_UTILS_IMPL_CDD_CDD_CHECKS_H
+// Implementation
+#include <etsi_its_msgs_utils/impl/mapem/mapem_ts_access.h>
