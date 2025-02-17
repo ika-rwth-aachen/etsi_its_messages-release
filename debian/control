@@ -1,0 +1,12 @@
+Source: ros-noetic-etsi-its-vam-ts-coding
+Section: misc
+Priority: optional
+Maintainer: Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-ros-environment
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-etsi-its-vam-ts-coding
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-ros-environment
+Description: C++ compatible C source code for ETSI ITS VAMs (TS) generated from ASN.1 using asn1c
