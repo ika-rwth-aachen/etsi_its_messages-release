@@ -1,0 +1,62 @@
+ros-noetic-etsi-its-messages (3.1.0-1focal) focal; urgency=high
+
+  * Merge branch 'main' into feature/spat-map-plugin
+  * Contributors: Guido Küppers
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Mon, 17 Feb 2025 00:00:00 -0000
+
+ros-noetic-etsi-its-messages (3.0.0-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 10 Dec 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-messages (2.4.0-1focal) focal; urgency=high
+
+  * Merge branch 'main' into feature/denm-launchfile-transformation
+  * Contributors: Lennart Reiher
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 19 Nov 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-messages (2.3.0-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 15 Oct 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-messages (2.2.0-1focal) focal; urgency=high
+
+  * Merge pull request #2 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/2> from lreiher/fix-converter-memleak
+    Resolve conflicts with ika-rwth-aachen/etsi_its_messages and free ret.buffer
+  * Merge remote-tracking branch 'ika/main' into fix-converter-memleak
+  * Contributors: Lennart Reiher, v0-e
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Thu, 01 Aug 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-messages (2.1.0-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 09 Jul 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-messages (2.0.2-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Fri, 31 May 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-messages (2.0.1-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 27 Feb 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-messages (2.0.0-1focal) focal; urgency=high
+
+  * Merge pull request #5 from ika-rwth-aachen/improvement/satisfy-package-conventions
+    Refactoring to satisfy ROS package conventions
+  * Contributors: Lennart Reiher
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Fri, 05 Jan 2024 00:00:00 -0000
+
+
