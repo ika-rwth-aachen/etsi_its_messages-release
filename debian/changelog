@@ -1,0 +1,9 @@
+ros-noetic-etsi-its-mcm-uulm-coding (3.2.0-1focal) focal; urgency=high
+
+  * Merge pull request #75 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/75> from ika-rwth-aachen/uulm-mcm
+    Add MCM version of Ulm University
+  * Contributors: Jean-Pierre Busch
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 22 Apr 2025 00:00:00 -0000
+
+
