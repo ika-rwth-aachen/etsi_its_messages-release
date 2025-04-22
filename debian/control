@@ -1,0 +1,12 @@
+Source: ros-noetic-etsi-its-msgs-utils
+Section: misc
+Priority: optional
+Maintainer: Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>
+Build-Depends: debhelper (>= 9.0.0), libgeographic-dev, ros-noetic-catkin, ros-noetic-etsi-its-msgs, ros-noetic-geometry-msgs, ros-noetic-ros-environment, ros-noetic-tf2-geometry-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-etsi-its-msgs-utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgeographic-dev, ros-noetic-etsi-its-msgs, ros-noetic-geometry-msgs, ros-noetic-ros-environment, ros-noetic-tf2-geometry-msgs
+Description: ROS messages and utility functions for ETSI ITS messages
