@@ -1,3 +1,60 @@
+## etsi_its_messages (noetic) - 3.2.0-1
+
+The packages in the `etsi_its_messages` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -y --no-web --ros-distro noetic --override-release-repository-push-url https://github.com/ika-rwth-aachen/etsi_its_messages-release.git --no-pull-request --debug etsi_its_messages` on `Tue, 22 Apr 2025 12:50:50 -0000`
+
+These packages were released:
+- `etsi_its_cam_coding`
+- `etsi_its_cam_conversion`
+- `etsi_its_cam_msgs`
+- `etsi_its_cam_ts_coding`
+- `etsi_its_cam_ts_conversion`
+- `etsi_its_cam_ts_msgs`
+- `etsi_its_coding`
+- `etsi_its_conversion`
+- `etsi_its_cpm_ts_coding`
+- `etsi_its_cpm_ts_conversion`
+- `etsi_its_cpm_ts_msgs`
+- `etsi_its_denm_coding`
+- `etsi_its_denm_conversion`
+- `etsi_its_denm_msgs`
+- `etsi_its_denm_ts_coding`
+- `etsi_its_denm_ts_conversion`
+- `etsi_its_denm_ts_msgs`
+- `etsi_its_mapem_ts_coding`
+- `etsi_its_mapem_ts_conversion`
+- `etsi_its_mapem_ts_msgs`
+- `etsi_its_mcm_uulm_coding`
+- `etsi_its_mcm_uulm_conversion`
+- `etsi_its_mcm_uulm_msgs`
+- `etsi_its_messages`
+- `etsi_its_msgs`
+- `etsi_its_msgs_utils`
+- `etsi_its_primitives_conversion`
+- `etsi_its_rviz_plugins`
+- `etsi_its_spatem_ts_coding`
+- `etsi_its_spatem_ts_conversion`
+- `etsi_its_spatem_ts_msgs`
+- `etsi_its_vam_ts_coding`
+- `etsi_its_vam_ts_conversion`
+- `etsi_its_vam_ts_msgs`
+
+Version of package(s) in repository `etsi_its_messages`:
+
+- upstream repository: https://github.com/ika-rwth-aachen/etsi_its_messages.git
+- release repository: https://github.com/ika-rwth-aachen/etsi_its_messages-release.git
+- rosdistro version: `3.1.0-1`
+- old version: `3.1.0-1`
+- new version: `3.2.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## etsi_its_messages (noetic) - 3.1.0-1
 
 The packages in the `etsi_its_messages` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -y --no-web --ros-distro noetic --override-release-repository-push-url https://github.com/ika-rwth-aachen/etsi_its_messages-release.git --no-pull-request --debug etsi_its_messages` on `Mon, 17 Feb 2025 18:05:18 -0000`
