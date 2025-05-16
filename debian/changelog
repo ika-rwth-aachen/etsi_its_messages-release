@@ -1,0 +1,98 @@
+ros-noetic-etsi-its-rviz-plugins (3.2.1-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Fri, 16 May 2025 00:00:00 -0000
+
+ros-noetic-etsi-its-rviz-plugins (3.2.0-1focal) focal; urgency=high
+
+  * Merge branch 'main' into uulm-mcm
+  * Merge pull request #73 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/73> from ika-rwth-aachen/fix/spatem-viz
+    Fix visualization of SPATEMS on Startup of RViz
+  * Merge pull request #70 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/70> from ika-rwth-aachen/improvement/display_different_utm_zones_at_once
+    Improvement/display different utm zones at once
+  * Contributors: Guido Küppers, Jean-Pierre Busch
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 22 Apr 2025 00:00:00 -0000
+
+ros-noetic-etsi-its-rviz-plugins (3.1.0-1focal) focal; urgency=high
+
+  * Merge pull request #67 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/67> from ika-rwth-aachen/update-copyright
+    Update copyright
+  * Merge branch 'main' into denm-v2
+  * Merge pull request #65 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/65> from ika-rwth-aachen/improvement/display_spatem_timing_information
+    Improvement/display spatem timing information
+  * Merge pull request #66 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/66> from ika-rwth-aachen/fix/default-leap-seconds
+    Use rbegin() instead of end() to access last element of std::map storing the leap-second insertions
+  * Merge pull request #55 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/55> from ika-rwth-aachen/feature/spat-map-plugin
+    RViz Plugin for SPATEM/MAPEM
+  * Merge branch 'main' into feature/spat-map-plugin
+  * Contributors: AlexanderWilczynski, Guido Küppers, Jean-Pierre Busch, Lennart Reiher
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Mon, 17 Feb 2025 00:00:00 -0000
+
+ros-noetic-etsi-its-rviz-plugins (3.0.0-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 10 Dec 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-rviz-plugins (2.4.0-1focal) focal; urgency=high
+
+  * Merge pull request #39 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/39> from ika-rwth-aachen/feature/denm-launchfile-transformation
+    Simplify how a reference position is set for etsi_its_rviz_plugins
+  * Merge branch 'main' into feature/denm-launchfile-transformation
+  * Contributors: Lennart Reiher
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 19 Nov 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-rviz-plugins (2.3.0-1focal) focal; urgency=high
+
+  * Merge pull request #38 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/38> from ika-rwth-aachen/feature/cpm_utils
+    Adding CPM Access-Functions and RViz Plugin; and improve utils package for all message types
+  * Contributors: Jean-Pierre Busch
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 15 Oct 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-rviz-plugins (2.2.0-1focal) focal; urgency=high
+
+  * Merge branch 'main' into refactor/conversion
+  * Merge pull request #2 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/2> from lreiher/fix-converter-memleak
+    Resolve conflicts with ika-rwth-aachen/etsi_its_messages and free ret.buffer
+  * Merge remote-tracking branch 'ika/main' into fix-converter-memleak
+  * Merge pull request #25 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/25> from FabianThomsen/fix/offset
+    Fix offset in CAM visualization
+  * Contributors: Guido Küppers, Lennart Reiher, v0-e
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Thu, 01 Aug 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-rviz-plugins (2.1.0-1focal) focal; urgency=high
+
+  * Merge pull request #20 from ika-rwth-aachen/further-msgs
+    Switch to rust-based generation and add additional message types
+  * Contributors: Jean-Pierre Busch
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 09 Jul 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-rviz-plugins (2.0.2-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Fri, 31 May 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-rviz-plugins (2.0.1-1focal) focal; urgency=high
+
+
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Tue, 27 Feb 2024 00:00:00 -0000
+
+ros-noetic-etsi-its-rviz-plugins (2.0.0-1focal) focal; urgency=high
+
+  * Merge pull request #5 from ika-rwth-aachen/improvement/satisfy-package-conventions
+    Refactoring to satisfy ROS package conventions
+  * Merge pull request #4 from ika-rwth-aachen/improvement/leap_second_map
+  * Contributors: Lennart Reiher
+
+ -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Fri, 05 Jan 2024 00:00:00 -0000
+
+
