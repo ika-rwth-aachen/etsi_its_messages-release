@@ -1,0 +1,12 @@
+Source: ros-noetic-etsi-its-cpm-ts-msgs
+Section: misc
+Priority: optional
+Maintainer: Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-message-generation, ros-noetic-ros-environment, ros-noetic-std-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-etsi-its-cpm-ts-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-message-generation, ros-noetic-message-runtime, ros-noetic-ros-environment, ros-noetic-std-msgs
+Description: ROS messages for ETSI ITS CPM (TS)
