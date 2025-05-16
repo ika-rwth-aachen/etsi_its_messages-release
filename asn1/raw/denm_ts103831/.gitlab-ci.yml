@@ -1,0 +1,19 @@
+include:
+  - project: 'forge-tools/asn2md'
+    file: '/gitlab-ci/base.yml'
+
+variables:
+  ASN1_SRC: 'cdd/*.asn *.asn'
+  
+validate:
+  extends: .validate
+  only:
+    changes:
+      - '*.asn'
+
+
+documentation:
+  extends: .documentation
+  only:
+    changes:
+      - '*.asn'
